@@ -3,23 +3,22 @@ package homework;
 
 public class CurrencyJson {
 
-    public String [] categories;
+    private String table;
+    private String currency;
+    private String code;
+    private Rates [] rate;
 
-    public String arrayOfExchangeRateTable;
-
-    public String table;
-    public String currency;
-    public String code;
-    public String no;
-    public double [] mid;
-
-
-    public class Rates {
-
-        public String no;
-        public String effective_date;
-        public double mid;
-
+    public String getTable() {
+        return table;
     }
+
+    public String getCurrency() {
+        return currency;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
 
 }
