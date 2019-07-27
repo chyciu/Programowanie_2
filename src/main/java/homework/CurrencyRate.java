@@ -5,6 +5,7 @@ import com.google.gson.Gson;
 import java.io.IOException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class CurrencyRate {
@@ -34,10 +35,10 @@ public class CurrencyRate {
 
         Gson gson = new Gson();
         CurrencyJson currencyJ = gson.fromJson(jsonCurrency, CurrencyJson.class);
-        Rates rateClass = gson.fromJson(jsonCurrency,Rates.class);
+        Rates.RateItems rateClass = gson.fromJson(jsonCurrency, Rates.RateItems.class);
         System.out.println(rateClass.mid);
+        System.out.println(rateClass.effective_date);
 
-        // System.out.println(currency.table);
 
     }
 }
